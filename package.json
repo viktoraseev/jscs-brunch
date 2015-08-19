@@ -1,0 +1,28 @@
+{
+  "name": "jscs-brunch",
+  "version": "0.0.1",
+  "description": "JSCS validator for brunch.io",
+  "main": "index.js",
+  "dependencies": {
+    "jscs": "^2.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eveenah/jscs-brunch.git"
+  },
+  "keywords": [
+    "brunch",
+    "jscs"
+  ],
+  "author": "Viktor Aseev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eveenah/jscs-brunch/issues"
+  },
+  "homepage": "https://github.com/eveenah/jscs-brunch#readme",
+  "readmeFilename": "README.md",
+}
