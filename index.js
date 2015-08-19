@@ -1,11 +1,12 @@
 (function() {
   var Checker = require('jscs');
-  var checker, jscsconfig;
   var normalize = require('path').normalize;
+  var checker;
+  var jscsconfig;
 
   function JSCSChecker(config) {
     jscsconfig = config.plugins && config.plugins.JSCS;
-    var options = jscsconfig && jscsconfig.config || { preset: "google" };
+    var options = jscsconfig && jscsconfig.config || {preset: 'google'};
     checker = new Checker();
     checker.registerDefaultRules();
     checker.configure(options);
@@ -16,16 +17,18 @@
   JSCSChecker.prototype.extension = 'js';
 
   JSCSChecker.prototype.lint = function(data, path, callback) {
-    if (!isMatch(path, jscsconfig.files))
+    if (!isMatch(path, jscsconfig.files)) {
       return callback(null);
+    }
     var results = checker.checkString(data);
     var errors = results.getErrorList();
-    var errorStr = ''
+    var errorStr = '';
     errors.forEach(function(error) {
       var colorizeOutput = true;
       //console.log( + "\n");
-      if (errorStr.length < 1000)
-        errorStr += "\n" + results.explainError(error, colorizeOutput) + "\n"
+      if (errorStr.length < 1000) {
+        errorStr += '\n' + results.explainError(error, colorizeOutput) + '\n';
+      }
     });
     // HACK reset checker status, otherwise it will not work
     checker._errorsFound = 0;
