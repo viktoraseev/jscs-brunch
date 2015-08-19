@@ -1,6 +1,6 @@
 {
   "name": "jscs-brunch",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "JSCS validator for brunch.io",
   "main": "index.js",
   "dependencies": {

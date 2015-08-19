@@ -1,4 +1,5 @@
 (function() {
+  'use strict';
   var Checker = require('jscs');
   var normalize = require('path').normalize;
   var checker;
@@ -41,18 +42,19 @@
   };
 
   // use brunch style Checker
-  function isMatch(path, test) {
+  function isMatch(originalPath, test) {
+    var path = normalize(originalPath);
     switch (toString.call(test)) {
       case '[object RegExp]':
         return path.match(test);
       case '[object Function]':
         return test(path);
       case '[object String]':
-        return startsWith(normalize(path), normalize(test));
+        return normalize(path).indexOf(normalize(test)) === 0;
       case '[object Array]':
         return test.some((function(_this) {
           return function(subTest) {
-            return _this.isIgnored(path, subTest);
+            return isMatch(path, subTest);
           };
         })(this));
       default:
