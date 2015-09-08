@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eveenah/jscs-brunch.git"
+    "url": "git+https://github.com/viktoraseev/jscs-brunch.git"
   },
   "keywords": [
     "brunch",
@@ -21,8 +21,8 @@
   "author": "Viktor Aseev",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/eveenah/jscs-brunch/issues"
+    "url": "https://github.com/viktoraseev/jscs-brunch/issues"
   },
-  "homepage": "https://github.com/eveenah/jscs-brunch#readme",
+  "homepage": "https://github.com/viktoraseev/jscs-brunch#readme",
   "readmeFilename": "README.md"
 }
